@@ -1,0 +1,26 @@
+void main()
+{
+    //variaveis
+    int I, II, III, IV, V;
+    
+    //inicio
+    printf ("Quais foram suas 5 notas, meu nobre?\n");
+    scanf ("%d %d %d %d %d", &I, &II, &III, &IV, &V);
+    
+    if (I >= 70 && II >= 70 && III >= 70 && IV >= 70 && V >= 70)
+    {
+        printf ("Passou com A papar");
+    }
+    else if (I >= 70 && II >= 70 && III <= 70 && IV >= 70 && V <= 70)
+    {
+        printf ("Passou com b papar");
+    } 
+    else if (I >= 70 && II >= 70 && (III >= 70 || IV >= 70) && V <= 70)
+    {
+        printf ("Passou com c");
+    }
+
+    else {
+         printf ("Nao passou, BURRO");
+    }
+}
