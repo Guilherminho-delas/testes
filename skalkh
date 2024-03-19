@@ -1,0 +1,86 @@
+#include <stdio.h>
+
+int main()
+{
+    //variaveis
+    int num1, num2;
+    int u1, d1, c1;
+    int u2, d2, c2;
+    int base1, base2;
+    int max1, max2;
+    
+    
+    //inicio
+    scanf ("%i", &num1);
+    scanf ("%i", &num2);
+    
+    base1 = 1;
+    base2 = 1;
+    
+    u1 = num1%10;
+    num1 /+10;
+    d1 = num1%10;
+    c1 = num1/10;
+    
+    u2 = num2%10;
+    num2 /+10;
+    d2 = num2%10;
+    c2 = num2/10;
+    
+    if (u1>u2)
+    {
+        u1 *= base1;
+        base1*=10;
+    } 
+    else if (u2>u1)
+    {
+        u2 *= base2;
+        base2*=10;
+    } else {
+        u1 *= base1;
+        base1*=10;
+        
+        u2 *= base2;
+        base2*=10;
+    }
+    
+    if (d1>d2)
+    {
+        d1 *= base1;
+        base1*=10;
+    } 
+    else if (d2>d1)
+    {
+        d2 *= base2;
+        base2*=10;
+    } else {
+        d1 *= base1;
+        base1*=10;
+        
+        d2 *= base2;
+        base2*=10;
+    }
+    
+    if (c1>c2)
+    {
+        c1 *= base1;
+        base1*=10;
+    } 
+    else if (c2>c1)
+    {
+        c2 *= base2;
+        base2*=10;
+    } else {
+        c1 *= base1;
+        base1*=10;
+        
+        c2 *= base2;
+        base2*=10;
+    }
+    
+    max1 = u1+d1+c1;
+    max2 = u2+d2+c2;
+    
+    printf ("%i e %i", max1, max2);
+    
+}
